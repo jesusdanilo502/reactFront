@@ -1,5 +1,5 @@
 export default function Home() {
     return(
-        <div>Home page</div>
+        <div className="max-w-7xl mx-auto mt-12">sss</div>
     )
 }

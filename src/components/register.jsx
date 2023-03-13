@@ -10,7 +10,16 @@ export default function Register() {
     const [password,setPassword] = useState();
     
     const submitForm = () =>{
-    
+        const response =  fetch('http://127.0.0.1:8000/api/register',{
+            method:'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body:{email:email,password:password}
+        }).then((res) => {
+            navigate('/login')
+        })
     }
     
     return(

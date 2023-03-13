@@ -6,7 +6,6 @@ import AuthUser from './AuthUser';
 export default function Dashboard (){
     const [userdetail, setUserdetail]= useState('');
     const {token} = AuthUser();
-    console.log('eltokennnnnnnn'+token)
     useEffect( ()=>{
         fetchUserDetail();
     },[]);
@@ -26,7 +25,7 @@ export default function Dashboard (){
     function renderElement(){
         if(userdetail){
             return <div>
-                <h4>Name</h4>
+                <h4>Nombre</h4>
                 <p>{userdetail.name}</p>
                 <h4>Email</h4>
                 <p>{userdetail.email}</p>
